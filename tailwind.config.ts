@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Botnoi GPT custom colors
+        botnoi: {
+          primary: "#43A5DC",
+          light: "#D2FFFF",
+          cyan: "#2ED3F7",
+          profile: "#366BC9",
+        },
+        gray: {
+          100: "#F7F7F7",
+          200: "rgba(217, 217, 217, 0.63)",
+          300: "rgba(0, 0, 0, 0.32)",
+          400: "rgba(0, 0, 0, 0.13)",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
