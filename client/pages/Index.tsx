@@ -113,8 +113,18 @@ export default function Index() {
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-base font-semibold text-gray-900">Chat</h2>
             <div className="flex items-center space-x-2">
-              <Folder className="w-4 h-4 text-gray-500 cursor-pointer" />
-              <Edit className="w-4 h-4 text-gray-500 cursor-pointer" />
+              <button
+                className="w-4 h-4 text-gray-500 hover:text-botnoi-primary transition-colors cursor-pointer"
+                title="Create folder"
+              >
+                <Folder className="w-4 h-4" />
+              </button>
+              <button
+                className="w-4 h-4 text-gray-500 hover:text-botnoi-primary transition-colors cursor-pointer"
+                title="Start new chat"
+              >
+                <Plus className="w-4 h-4" />
+              </button>
             </div>
           </div>
 
