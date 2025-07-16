@@ -67,6 +67,7 @@ const HappyFaceIcon = () => (
 
 export default function Index() {
   const [message, setMessage] = useState("");
+  const [isChatPanelOpen, setIsChatPanelOpen] = useState(true);
   const navigate = useNavigate();
 
   return (
