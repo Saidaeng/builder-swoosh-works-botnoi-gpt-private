@@ -70,11 +70,11 @@ export default function Index() {
   const [isChatPanelOpen, setIsChatPanelOpen] = useState(true);
   const navigate = useNavigate();
 
-  return (
+    return (
     <div className="h-screen bg-gray-50 flex overflow-hidden">
       {/* Sidebar */}
       <div className="w-[58px] bg-gradient-to-b from-botnoi-primary to-botnoi-light flex flex-col items-center py-4 space-y-4">
-        {/* Chat Icon */}
+                {/* Chat Icon */}
         <div className="relative">
           <button
             onClick={() => setIsChatPanelOpen(!isChatPanelOpen)}
@@ -87,9 +87,9 @@ export default function Index() {
           </button>
         </div>
 
-        {/* Settings */}
+                {/* Settings */}
         <button
-          onClick={() => navigate("/settings")}
+          onClick={() => navigate('/settings')}
           className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors"
         >
           <Settings className="w-5 h-5 text-white" />
@@ -98,7 +98,7 @@ export default function Index() {
         {/* Profile */}
         <div className="flex flex-col items-center space-y-1 mt-auto">
           <button
-            onClick={() => navigate("/profile")}
+            onClick={() => navigate('/profile')}
             className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors"
           >
             <span className="text-sm font-bold text-white">E</span>
@@ -107,19 +107,20 @@ export default function Index() {
 
         {/* Logout */}
         <button
-          onClick={() => navigate("/login")}
+          onClick={() => navigate('/login')}
           className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-white/10 rounded-lg transition-colors"
         >
           <LogOut className="w-5 h-5 text-white" />
         </button>
       </div>
 
-      {/* Chat List Panel */}
-      <div className="w-[185px] bg-white border-r border-gray-200 flex flex-col">
+            {/* Chat List Panel */}
+      {isChatPanelOpen && (
+        <div className="w-[185px] bg-white border-r border-gray-200 flex flex-col transition-all duration-300 ease-in-out">
         <div className="p-3 border-b border-gray-100">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-base font-semibold text-gray-900">Chat</h2>
-            <div className="flex items-center space-x-2">
+                        <div className="flex items-center space-x-2">
               <button
                 className="w-4 h-4 text-gray-500 hover:text-botnoi-primary transition-colors cursor-pointer"
                 title="Create folder"
@@ -156,9 +157,7 @@ export default function Index() {
               <div className="text-sm font-medium text-gray-900 truncate">
                 Botnoi GPT
               </div>
-              <div className="text-xs text-gray-500 truncate">
-                How are you doing?
-              </div>
+              <div className="text-xs text-gray-500 truncate">How are you doing?</div>
             </div>
             <div className="text-xs text-gray-400">•••</div>
           </div>
