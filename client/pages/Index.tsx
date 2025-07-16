@@ -67,6 +67,7 @@ const HappyFaceIcon = () => (
 
 export default function Index() {
   const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div className="h-screen bg-gray-50 flex overflow-hidden">
