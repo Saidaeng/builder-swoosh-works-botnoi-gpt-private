@@ -81,21 +81,30 @@ export default function Index() {
         </div>
 
         {/* Settings */}
-        <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors">
+        <button
+          onClick={() => navigate("/settings")}
+          className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors"
+        >
           <Settings className="w-5 h-5 text-white" />
-        </div>
+        </button>
 
         {/* Profile */}
         <div className="flex flex-col items-center space-y-1 mt-auto">
-          <div className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors">
+          <button
+            onClick={() => navigate("/profile")}
+            className="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/30 transition-colors"
+          >
             <span className="text-sm font-bold text-white">E</span>
-          </div>
+          </button>
         </div>
 
         {/* Logout */}
-        <div className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-white/10 rounded-lg transition-colors">
+        <button
+          onClick={() => navigate("/login")}
+          className="w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-white/10 rounded-lg transition-colors"
+        >
           <LogOut className="w-5 h-5 text-white" />
-        </div>
+        </button>
       </div>
 
       {/* Chat List Panel */}
